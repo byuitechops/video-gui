@@ -5,9 +5,19 @@
 .col:last-child{width:20%;padding-left:15px;}
 .col{text-align:right;}
 .form-row div div{clear:both;text-align:right;}
-label{display:inline-block;padding-right:15px;}
-.form-row  select, input{width:150px; }
-button{height:100%; width:100%;text-align:center;}
+
+label{
+    display:inline-block;padding-right:15px;
+filter:drop-shadow(0 0 2px #ff4d91) brightness(2);
+color:#ff4d91;
+  background: -webkit-linear-gradient(#ff4d91,#FB2F88);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    transform: rotate(-5deg);
+
+}
+.form-row  select, input{width:200px; }
+button{height:30px; width:100%;text-align:center;}
 #copybutton{height:30px;}
 #output{width:calc(90% - 5px);height:70px;}
 /*******************************************/
@@ -15,30 +25,17 @@ button{height:100%; width:100%;text-align:center;}
 
 .container{height:100vh; width:100vw;
     position:fixed;
-    background-color:#6D4390;
+
     -webkit-filter: brightness(2);
           filter: brightness(2);
 
 }
-body{background-color:#6D4390;
-
+body{
+      background-color:#6D4390;
+    background-image: url('./bg.jpg');
+    background-position:center 10%;
 }
 
-.container:before {
-  content: "";
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 100%;
-  background: -webkit-linear-gradient(rgba(18,16,16,0) 50%, rgba(0,0,0,0.25) 50%), -webkit-linear-gradient(left, rgba(255,0,0,0.06), rgba(0,255,0,0.02), rgba(0,0,255,0.06));
-  background: linear-gradient(rgba(18,16,16,0) 50%, rgba(0,0,0,0.25) 50%), linear-gradient(90deg, rgba(255,0,0,0.06), rgba(0,255,0,0.02), rgba(0,0,255,0.06));
-  z-index: 4;
-  background-size: 100% 3px, 3px 100%;
-  pointer-events: none;
-}
 
 .triangle {
   border-top: rgba(48,11,51,0.87) 280px solid;
@@ -78,16 +75,23 @@ body{background-color:#6D4390;
   text-align: center;
 
 }
-
-.form-box{
+.form-box-perspective{
+       -webkit-perspective:600px;
+    perspective:600px;
     z-index:5;
-    width:400px;
+}
+.form-box{
+
+        -webkit-transform: rotateX(20deg); /* Chrome, Safari, Opera  */
+    transform: rotateX(20deg);
+    z-index:5;
+    width:500px;
     padding:10px;
     top:300px;
-    left:calc(50% - 200px);
-    position:fixed;
+    left:calc(50% - 250px);
+    position:relative;
     background:#62bfc8;
-    background-color:rgba(98,191,200,);
+    background-color:rgba(75, 28, 75,0.7);
     font-family:'Yellowtail',sans-serif;
     font-weight:bold;
     border:3px solid white;
