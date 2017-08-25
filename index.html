@@ -1,1 +1,57 @@
-hi.
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>URL to Embed</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <script src="./script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Yellowtail" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="grain"></div>
+        <div id="header"><div class="triangle"></div><div id="headertitle"><h1>URL</h1><h2>CONVERTER</h2></div></div>
+        <div class="form-box">
+            <div class="form-row">
+                <div class="col">
+                <label>Video URL</label>
+                <input id="url" type="text">
+                </div><div class="col">&nbsp;</div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <div>
+                        <label>Type</label>
+                        <select id="type">
+                            <option value="youtube">Youtube</option>
+                            <option value="kaltura">Kaltura</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Size</label>
+                        <select id="size">
+                            <option value="sm">Small</option>
+                            <option value="med">Medium</option>
+                            <option value="lg">Large</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col">
+                    <button onclick="convert()" id="getcode">Get Code</button>
+                </div>
+            </div>
+
+
+            <div class="form-row"><div class="col">
+                <textarea id="output"></textarea></div><div class="col">
+                <button onclick="copy('#output')" id="copybutton">COPY</button></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
