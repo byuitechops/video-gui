@@ -1,5 +1,3 @@
-
-/**** FORM FORMATTING ***/
 .form-row{padding:5px 15px; display:flex; justify-content:center;}
 .col:first-child{width:calc(80% - 15px);}
 .col:last-child{width:20%;padding-left:15px;}
@@ -16,7 +14,7 @@ color:#ff4d91;
     transform: rotate(-5deg);
 
 }
-.form-row  select, input{width:200px; }
+.form-row  select, input{width:200px;}
 button{height:30px; width:100%;text-align:center;}
 button{
         -webkit-box-shadow:
@@ -53,7 +51,6 @@ button p{
 }
 #copybutton{height:30px;}
 #output{width:calc(90% - 5px);height:70px;}
-/*******************************************/
 
 #egg{visibility:hidden;}
 #egg iframe{height:0px; width:0px;}
@@ -167,4 +164,10 @@ body{
 
 #getpumped{
     width:50%;
+}
+input, select, textarea{
+    font-family:'Audiowide', sans-serif;
+    background:black;
+    color:green;
+    border:3px solid white;
 }
