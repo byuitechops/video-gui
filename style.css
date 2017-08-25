@@ -170,4 +170,18 @@ input, select, textarea{
     background:black;
     color:green;
     border:3px solid white;
+
+         -webkit-box-shadow:
+    0px 0px 3px 2px #E96CD0,
+    inset 0px 0px 3px 2px #E96CD0;
+  -moz-box-shadow:
+    0px 0px 3px 2px #E96CD0,
+    inset 0px 0px 3px 2px #E96CD0;
+  -o-box-shadow:
+    0px 0px 3px 2px #E96CD0,
+    inset 0px 0px 3px 2px #E96CD0;
+  box-shadow:
+    0px 0px 3px 2px #E96CD0,
+    inset 0px 0px 3px 2px #E96CD0;
+
 }
