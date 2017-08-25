@@ -8,7 +8,7 @@
 
 label{
     display:inline-block;padding-right:15px;
-filter:drop-shadow(0 0 2px #ff4d91) brightness(2);
+filter:drop-shadow(0 0 15px #FB2F88) brightness(2);
 color:#ff4d91;
   background: -webkit-linear-gradient(#ff4d91,#FB2F88);
   -webkit-background-clip: text;
@@ -18,14 +18,48 @@ color:#ff4d91;
 }
 .form-row  select, input{width:200px; }
 button{height:30px; width:100%;text-align:center;}
+button{
+        -webkit-box-shadow:
+    0px 0px 5px 3px #E96CD0,
+    inset 0px 0px 5px 3px #E96CD0;
+  -moz-box-shadow:
+    0px 0px 5px 3px #E96CD0,
+    inset 0px 0px 5px 3px #E96CD0;
+  -o-box-shadow:
+    0px 0px 5px 3px #E96CD0,
+    inset 0px 0px 5px 3px #E96CD0;
+  box-shadow:
+    0px 0px 35x 3px #E96CD0,
+    inset 0px 0px 5px 3px #E96CD0;
+    background:none;
+    width:100%;
+    text-align:center;
+    font-family:'Montserrat',sans-serif;
+    font-weight:bold;
+        background:rgba(70,195,233,0.3);
+    border:3px solid white;
+    filter:brightness(1);
+    /*Make it better */
+    cursor:pointer;
+}
+button p{
+    margin:0;
+    font-size:20px;
+    font-family:'Yellowtail';
+      background: -webkit-linear-gradient(#ff4d91,#FB2F88);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    filter:brightness(3);
+}
 #copybutton{height:30px;}
 #output{width:calc(90% - 5px);height:70px;}
 /*******************************************/
 
-
+#egg{visibility:hidden;}
+#egg iframe{height:0px; width:0px;}
 .container{height:100vh; width:100vw;
     position:fixed;
-
+overflow:hidden;
     -webkit-filter: brightness(2);
           filter: brightness(2);
 
@@ -76,8 +110,8 @@ body{
 
 }
 .form-box-perspective{
-       -webkit-perspective:600px;
-    perspective:600px;
+       -webkit-perspective:300px;
+    perspective:300px;
     z-index:5;
 }
 .form-box{
@@ -112,7 +146,25 @@ body{
            -webkit-filter: brightness(.5);
           filter: brightness(.5);}
 }
+.grain {
 
+    background:none;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+}
+.grain-wrap,
+.grain iframe {
+    opacity:0.1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 
+  pointer-events: none;
+}
 
-
+#getpumped{
+    width:50%;
+}

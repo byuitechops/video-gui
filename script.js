@@ -47,6 +47,9 @@ function copy(element) {
   $temp.remove();
 }
 
+function easteregg(){
+    document.getElementById("egg").src += "?&autoplay=1&t=2s";
+}
 /*
 <div class="byui-video" data-vidid="dQw4w9WgXcQ" data-source="youtube" data-height="315" data-width="860">
 <b>VIDEO DO NOT DELETE OR YOUR COURSE WILL EXPLODE</b>

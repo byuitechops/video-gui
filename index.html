@@ -14,45 +14,68 @@
 <body>
     <div class="container">
 
-        <div id="header"><div class="triangle"></div><div id="headertitle"><h1>URL</h1><h2>CONVERTER</h2></div></div>
+        <div id="header">
+            <div class="triangle"></div>
+            <div id="headertitle">
+                <h1>URL</h1>
+                <h2>CONVERTER</h2></div>
+        </div>
         <div class="form-box-perspective">
-        <div class="form-box">
-            <div class="form-row">
-                <div class="col">
-                <label>Video URL</label>
-                <input id="url" type="text">
-                </div><div class="col">&nbsp;</div>
-            </div>
-            <div class="form-row">
-                <div class="col">
-                    <div>
-                        <label>Type</label>
-                        <select id="type">
-                            <option value="youtube">Youtube</option>
-                            <option value="kaltura">Kaltura</option>
-                        </select>
+            <div class="form-box">
+                <div class="form-row">
+                    <div class="col">
+                        <label>Video URL</label>
+                        <input id="url" type="text">
                     </div>
-                    <div>
-                        <label>Size</label>
-                        <select id="size">
-                            <option value="sm">Small</option>
-                            <option value="med">Medium</option>
-                            <option value="lg">Large</option>
-                        </select>
+                    <div class="col">&nbsp;</div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <div>
+                            <label>Type</label>
+                            <select id="type">
+                                <option value="youtube">Youtube</option>
+                                <option value="kaltura">Kaltura</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Size</label>
+                            <select id="size">
+                                <option value="sm">Small</option>
+                                <option value="med">Medium</option>
+                                <option value="lg">Large</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <button onclick="convert()" id="getcode"><p>Get Code</p></button>
                     </div>
                 </div>
-                <div class="col">
-                    <button onclick="convert()" id="getcode">Get Code</button>
+
+
+                <div class="form-row">
+                    <div class="col">
+                        <textarea id="output"></textarea>
+                    </div>
+                    <div class="col">
+                        <button onclick="copy('#output')" id="copybutton"><p>COPY</p></button>
+                    </div>
+                </div>
+                <div class="form-row">
+
+
+                    <button onclick="easteregg()" id="getpumped"><p>GET PUMPED</p></button>
+                        <div ><iframe id="egg" width='0' height='0' src='https://www.youtube.com/embed/yK0P1Bk8Cx4' frameborder='0' ></iframe></div>
                 </div>
             </div>
-
-
-            <div class="form-row"><div class="col">
-                <textarea id="output"></textarea></div><div class="col">
-                <button onclick="copy('#output')" id="copybutton">COPY</button></div>
+        </div>
+        <div class="grainwrap">
+            <div class="grain">
+                <iframe class="grain" src="https://www.youtube.com/embed/8tZ_N3wP9Ko?autoplay=1&amp;loop=1&amp;controls=0&amp;iv_load_policy=3&amp;start=5&amp;showinfo=0&amp;autohide=1&amp;rel=0&amp;modestbranding=1"></iframe>
             </div>
-            </div></div>
+        </div>
     </div>
+
 </body>
 
 </html>
