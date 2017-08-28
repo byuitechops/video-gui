@@ -40,6 +40,7 @@ button{
     /*Make it better */
     cursor:pointer;
 }
+
 button p{
     margin:0;
     font-size:20px;
