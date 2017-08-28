@@ -90,6 +90,22 @@ function copy(element) {
     $temp.remove();
 }
 
+function reverse_parse() {
+    var input = document.getElementById("output").value;
+    var url = document.getElementById("url"),
+        type = document.getElementById("type"),
+        size = document.getElementById("size"),
+        aspect = document.getElementById("aspect"),
+        htmlt = document.getElementById("htmlt"),
+        rtft = document.getElementById("rtft");
+
+    url.value = input.split("'")[3];
+    type.value = input.split("'")[5];
+    size.value = input.split("'")[7];
+    aspect.value = input.split("'")[9];
+    htmlt.value = input.split("'")[11];
+    rtft.value = input.split("'")[13];
+}
 
 function easteregg() {
     document.getElementById("egg").src += "?&autoplay=1&t=2s";
