@@ -14,7 +14,7 @@ color:#ff4d91;
     transform: rotate(-5deg);
 
 }
-.form-row  select, input{width:200px;}
+.form-row  select, input{width:170px;}
 button{height:30px; width:100%;text-align:center;}
 button{
         -webkit-box-shadow:
