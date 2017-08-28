@@ -20,53 +20,7 @@ function convert() {
             break;
     }
 
-    embedcode += videoid + "' data-platform='" + type + "' ";
-
-    switch (aspect) {
-        case "16-9":
-            switch (size) {
-                case "sm":
-                    height = 180;
-                    width = 320;
-                    break;
-                case "med":
-                    height = 270;
-                    width = 480;
-                    break;
-                case "lg":
-                    height = 360;
-                    width = 640;
-                    break;
-                default:
-                    break;
-            }
-            ar = "16-9";
-            break;
-
-        case "4-3":
-            switch (size) {
-                case "sm":
-                    height = 240;
-                    width = 320;
-                    break;
-                case "med":
-                    height = 360;
-                    width = 480;
-                    break;
-                case "lg":
-                    height = 480;
-                    width = 640;
-                    break;
-                default:
-                    break;
-            }
-            ar = "4-3";
-                break;
-    }
-
-
-
-    embedcode += "data-height='" + height + "' data-width='" + width + "' data-ratio='" + ar + "' data-transcriptHTML='" + htmlt + "' data-transcriptRTF='" + rtft + "' ></div> ";
+    embedcode += videoid + "' data-platform='" + type + "' data-size='" + size + "' data-ratio='" + ar + "' data-transcriptHTML='" + htmlt + "' data-transcriptRTF='" + rtft + "' ></div> ";
 
     output.innerHTML = (embedcode);
 }
