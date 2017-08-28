@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>URL to Embed</title>
-    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link rel="stylesheet" href="./styles.css" type="text/css">
     <script src="./script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Yellowtail|Audiowide" rel="stylesheet">
@@ -17,38 +17,59 @@
         <div id="header">
             <div class="triangle"></div>
             <div id="headertitle">
-                <h1>URL</h1>
-                <h2>CONVERTER</h2></div>
+                <h1>URL CONVERTER</h1>
+            </div>
         </div>
         <div class="form-box-perspective">
             <div class="form-box">
                 <div class="form-row">
                     <div class="col">
-                        <label>Video URL</label>
-                        <input id="url" type="text">
+                        <div>
+                            <label>Video URL</label>
+                            <input id="url" type="text">
+                        </div>
+                        <div>
+                            <label>HTML Transcript URL</label>
+                            <input id="htmlt" type="text">
+                        </div>
+                        <div>
+                            <label>RTF Transcript URL</label>
+                            <input id="rtft" type="text">
+                        </div>
                     </div>
                     <div class="col">&nbsp;</div>
                 </div>
                 <div class="form-row">
                     <div class="col">
                         <div>
-                            <label>Type</label>
+                            <label>Platform</label>
                             <select id="type">
-                                <option value="youtube">Youtube</option>
+
                                 <option value="kaltura">Kaltura</option>
+                                <option value="youtube">Youtube</option>
                             </select>
                         </div>
                         <div>
                             <label>Size</label>
                             <select id="size">
                                 <option value="sm">Small</option>
-                                <option value="med">Medium</option>
+                                <option selected="selected" value="med">Medium</option>
                                 <option value="lg">Large</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Aspect Ratio</label>
+                            <select id="aspect">
+                                <option selected="selected" value="16-9">16:9</option>
+                                <option value="4-3">4:3</option>
+
                             </select>
                         </div>
                     </div>
                     <div class="col">
-                        <button onclick="convert()" id="getcode"><p>Get Code</p></button>
+                        <button onclick="convert()" id="getcode">
+                            <p>Get Code</p>
+                        </button>
                     </div>
                 </div>
 
@@ -58,14 +79,20 @@
                         <textarea id="output"></textarea>
                     </div>
                     <div class="col">
-                        <button onclick="copy('#output')" id="copybutton"><p>COPY</p></button>
+                        <button onclick="copy('#output')" id="copybutton">
+                            <p>COPY</p>
+                        </button>
                     </div>
                 </div>
-                <div class="form-row">
+                <div class="form-row easter-egg">
 
 
-                    <button onclick="easteregg()" id="getpumped"><p>GET PUMPED</p></button>
-                        <div ><iframe id="egg" width='0' height='0' src='https://www.youtube.com/embed/yK0P1Bk8Cx4' frameborder='0' ></iframe></div>
+                    <button onclick="easteregg()" id="getpumped">
+                        <p>GET PUMPED</p>
+                    </button>
+                    <div>
+                        <iframe id="egg" width='0' height='0' src='https://www.youtube.com/embed/yK0P1Bk8Cx4' frameborder='0'></iframe>
+                    </div>
                 </div>
             </div>
         </div>
