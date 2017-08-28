@@ -2,9 +2,9 @@ function convert() {
     var url = document.getElementById("url").value,
         type = document.getElementById("type").value,
         size = document.getElementById("size").value,
-        aspect = document.getElementById("aspect"),
-        htmlt = document.getElementById("htmlt"),
-        rtft = document.getElementById("rtft"),
+        aspect = document.getElementById("aspect").value,
+        htmlt = document.getElementById("htmlt").value,
+        rtft = document.getElementById("rtft").value,
         output = document.getElementById("output"),
         embedcode = "<div class='byui-video' data-id='",
         videoid, height, width, ar;
