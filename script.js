@@ -71,7 +71,7 @@ function convert() {
                 break;
         }
         if (type == "youtube") {
-            iframe_code = "<iframe width=" + width + " height=" + height + " src='https://www.youtube.com/embed/" + videoid + "' frameborder='0 ' allowfullscreen></iframe><p>(<a href='" + htmlt + "'>HTML Transcript</a>, <a href='" + rtf + "'>RTF Transcript</a>)</p>";
+            iframe_code = "<iframe width=" + width + " height=" + height + " src='https://www.youtube.com/embed/" + videoid + "' frameborder='0 ' allowfullscreen></iframe><p>(<a href='" + htmlt + "'>HTML Transcript</a>, <a href='" + rtft + "'>RTF Transcript</a>)</p>";
         } else if (type == "kaltura") {
             iframe_code = "<iframe width=" + width + " height=" + height + " src='https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/29018071/partner_id/1157612?iframeembed=true&amp;playerId=kaltura_player_1485805514&amp;entry_id=" + videoid + "&amp;flashvars[streamerType]=auto' frameborder='0 ' allowfullscreen=''></iframe><p>(<a href='" + htmlt + "'>HTML Transcript</a>, <a href='" + rtft + "'>RTF Transcript</a>)</p>";
         }
