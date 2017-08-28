@@ -60,13 +60,14 @@ function convert() {
                 default:
                     break;
             }
-            ar = "4-3",
-            break;
+            ar = "4-3";
+                break;
     }
 
 
 
-    embedcode += "data-height='" + height + "' data-width='" + width + "' data-ratio='" + ar +"' ></div> ";
+    embedcode += "data-height='" + height + "' data-width='" + width + "' data-ratio='" + ar + "' data-transcriptHTML='" + htmlt + "' data-transcriptRTF='" + rtft + "' ></div> ";
+
     output.innerHTML = (embedcode);
 }
 
