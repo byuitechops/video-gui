@@ -7,7 +7,7 @@ function convert() {
         rtft = document.getElementById("rtft").value,
         output = document.getElementById("output"),
         embedcode = "<div class='byui-video' data-id='",
-        videoid, height, width, ar;
+        videoid, height, width;
 
     switch (type) {
         case "youtube":
@@ -20,7 +20,7 @@ function convert() {
             break;
     }
 
-    embedcode += videoid + "' data-platform='" + type + "' data-size='" + size + "' data-ratio='" + ar + "' data-transcriptHTML='" + htmlt + "' data-transcriptRTF='" + rtft + "' ></div> ";
+    embedcode += videoid + "' data-platform='" + type + "' data-size='" + size + "' data-ratio='" + aspect + "' data-transcriptHTML='" + htmlt + "' data-transcriptRTF='" + rtft + "' ></div> ";
 
     output.innerHTML = (embedcode);
 }
