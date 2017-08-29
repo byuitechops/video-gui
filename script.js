@@ -12,10 +12,19 @@ function convert() {
         embedcode = "<div class='byui-video' data-id='",
         videoid, height, width;
 
-    if (url == "") {alert("URL required"); return;}
-    else if (title == "") {alert("Video title required"); return;}
-    else if (htmlt == "") {alert("HTML transcript URL required"); return;}
-    else if (rtft == "") {alert("RTF transcript URL required"); return;}
+    if (url == "") {
+        alert("URL required");
+        return;
+    } else if (title == "") {
+        alert("Video title required");
+        return;
+    } else if (htmlt == "") {
+        alert("HTML transcript URL required");
+        return;
+    } else if (rtft == "") {
+        alert("RTF transcript URL required");
+        return;
+    }
 
 
     switch (type) {
@@ -38,7 +47,18 @@ function convert() {
     output.innerHTML = (embedcode);
 
     function make_iframe() {
+
         var iframe_code = "";
+
+        if (link == true) {
+            if (type == "youtube") {
+                iframe_code = "<a href='https://www.youtube.com/watch?v=" + videoid + "' >" + title + "</a> (<a href='" + htmlt + "'>HTML Transcript</a>, <a href='" + rtft + "'>RTF Transcript</a>)";
+            } else if (type == "kaltura") {
+                iframe_code = "<a href='https://video.byui.edu/media/" + videoid + "' >" + title + "</a> (<a href='" + htmlt + "'>HTML Transcript</a>, <a href='" + rtft + "'>RTF Transcript</a>)";
+            }
+            return iframe_code;
+        }
+
 
         var height, width;
         switch (aspect) {
