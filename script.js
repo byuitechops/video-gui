@@ -7,10 +7,15 @@ function convert() {
         rtft = document.getElementById("rtft").value,
         link = document.getElementById("link").checked,
         download = document.getElementById("download").checked,
+        title = document.getElementById("videotitle").value,
         output = document.getElementById("output"),
         embedcode = "<div class='byui-video' data-id='",
         videoid, height, width;
 
+    if (url == "") {alert("URL required"); return;}
+    else if (title == "") {alert("Video title required"); return;}
+    else if (htmlt == "") {alert("HTML transcript URL required"); return;}
+    else if (rtft == "") {alert("RTF transcript URL required"); return;}
 
 
     switch (type) {
@@ -24,7 +29,7 @@ function convert() {
             break;
     }
 
-    embedcode += videoid + "' data-platform='" + type + "' data-size='" + size + "' data-ratio='" + aspect + "' data-transcriptHTML='" + htmlt + "' data-transcriptRTF='" + rtft + "' data-link='" + link + "' data-download='" + download + "'>";
+    embedcode += videoid + "' data-platform='" + type + "' data-size='" + size + "' data-ratio='" + aspect + "' data-transcriptHTML='" + htmlt + "' data-transcriptRTF='" + rtft + "' data-link='" + link + "' data-download='" + download + "' data-title='" + title + "'>";
 
     embedcode += make_iframe();
 
@@ -102,9 +107,11 @@ function reverse_parse() {
         htmlt = document.getElementById("htmlt"),
         rtft = document.getElementById("rtft"),
         link = document.getElementById("link"),
+        title = document.getElementById("videotitle"),
         download = document.getElementById("download");
 
     // NEEDS ERROR HANDLING (CHECK FOR EACH DATA TAG //
+    title.value = input.split("title='")[1].split("'")[0];
     url.value = input.split("id='")[1].split("'")[0];
     type.value = input.split("platform='")[1].split("'")[0];
     size.value = input.split("size='")[1].split("'")[0];
@@ -123,6 +130,9 @@ function reverse_parse() {
     }
 
 }
+
+
+
 
 function easteregg() {
     document.getElementById("egg").src += "?&autoplay=1&t=2s";
