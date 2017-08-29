@@ -5,9 +5,13 @@ function convert() {
         aspect = document.getElementById("aspect").value,
         htmlt = document.getElementById("htmlt").value,
         rtft = document.getElementById("rtft").value,
+        link = document.getElementById("link").checked,
+        download = document.getElementById("download").checked,
         output = document.getElementById("output"),
         embedcode = "<div class='byui-video' data-id='",
         videoid, height, width;
+
+
 
     switch (type) {
         case "youtube":
@@ -20,7 +24,7 @@ function convert() {
             break;
     }
 
-    embedcode += videoid + "' data-platform='" + type + "' data-size='" + size + "' data-ratio='" + aspect + "' data-transcriptHTML='" + htmlt + "' data-transcriptRTF='" + rtft + "' >";
+    embedcode += videoid + "' data-platform='" + type + "' data-size='" + size + "' data-ratio='" + aspect + "' data-transcriptHTML='" + htmlt + "' data-transcriptRTF='" + rtft + "' data-link='" + link + "' data-download='" + download + "'>";
 
     embedcode += make_iframe();
 
@@ -81,7 +85,6 @@ function convert() {
 
 
 
-
 function copy(element) {
     var $temp = $("<input>");
     $("body").append($temp);
@@ -97,15 +100,28 @@ function reverse_parse() {
         size = document.getElementById("size"),
         aspect = document.getElementById("aspect"),
         htmlt = document.getElementById("htmlt"),
-        rtft = document.getElementById("rtft");
+        rtft = document.getElementById("rtft"),
+        link = document.getElementById("link"),
+        download = document.getElementById("download");
 
-    console.log();
+    // NEEDS ERROR HANDLING (CHECK FOR EACH DATA TAG //
     url.value = input.split("id='")[1].split("'")[0];
     type.value = input.split("platform='")[1].split("'")[0];
     size.value = input.split("size='")[1].split("'")[0];
     aspect.value = input.split("ratio='")[1].split("'")[0];
     htmlt.value = input.split("HTML='")[1].split("'")[0];
     rtft.value = input.split("RTF='")[1].split("'")[0];
+    if (input.split("link='")[1].split("'")[0] == "true") {
+        link.checked = true;
+    } else {
+        link.checked = false;
+    }
+    if (input.split("download='")[1].split("'")[0] == "true") {
+        download.checked = true;
+    } else {
+        download.checked = false;
+    }
+
 }
 
 function easteregg() {

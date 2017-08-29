@@ -45,4 +45,15 @@ button p{
     font-size:18px;
 }
 
+input[type='checkbox']{
+    width:15px;
+
+    margin-right:135px;
+}
+
+input[type='checkbox'] + label{
+    font-size:16px;
+}
+.checkwrap{}
+
 .grain, #egg, .easter-egg{display:none; important!}
