@@ -99,12 +99,13 @@ function reverse_parse() {
         htmlt = document.getElementById("htmlt"),
         rtft = document.getElementById("rtft");
 
-    url.value = input.split("'")[3];
-    type.value = input.split("'")[5];
-    size.value = input.split("'")[7];
-    aspect.value = input.split("'")[9];
-    htmlt.value = input.split("'")[11];
-    rtft.value = input.split("'")[13];
+    console.log();
+    url.value = input.split("id='")[1].split("'")[0];
+    type.value = input.split("platform='")[1].split("'")[0];
+    size.value = input.split("size='")[1].split("'")[0];
+    aspect.value = input.split("ratio='")[1].split("'")[0];
+    htmlt.value = input.split("HTML='")[1].split("'")[0];
+    rtft.value = input.split("RTF='")[1].split("'")[0];
 }
 
 function easteregg() {
