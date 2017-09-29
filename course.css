@@ -1,0 +1,103 @@
+/********************************************************
+    The purpose of course.css is to house only the css
+    specific to an individual course. The online.css
+    houses all the default template formatting.
+********************************************************/
+/* DO NOT DELETE OR MODIFY THIS IMPORT */
+@import url("https://content.byui.edu/integ/gen/599082e0-3e89-4fd9-ac69-2615865d63c7/0/online.css");
+
+/* Add Course Specific css Below */
+
+
+/********************************************
+    ICONS
+********************************************/
+.addIcon {
+    position: relative;
+}
+
+.addIcon:before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    background-size: cover;
+}
+
+/* Icons for Headings */
+h2.addIcon,
+h3.addIcon,
+h4.addIcon,
+h5.addIcon {
+    margin: 20px 0;
+    border-radius: 5px;
+    background: #ebe4cc;
+    border-bottom: 2px solid #938c78;
+}
+
+h2.addIcon:before,
+h3.addIcon:before,
+h4.addIcon:before,
+h5.addIcon:before {
+    top: -8px;
+    left: 15px;
+}
+
+/* h2 */
+h2.addIcon {
+    padding: 8px 0 8px 105px;
+}
+
+/* h3 */
+h3.addIcon {
+    padding: 8px 0 8px 100px;
+}
+
+h3.addIcon:before {
+    width: 70px;
+    height: 70px;
+}
+
+/* h4 */
+h4.addIcon {
+    padding: 8px 0 8px 95px;
+}
+
+h4.addIcon:before {
+    width: 65px;
+    height: 65px;
+}
+
+/* h5 */
+h5.addIcon {
+    padding: 8px 0 8px 90px;
+}
+
+h5.addIcon:before {
+    width: 60px;
+    height: 60px;
+}
+
+/* Icons for divs */
+div.addIcon,
+p.addIcon {
+    padding-left: 95px;
+    margin: 10px 0;
+    min-height: 75px;
+}
+
+div.addIcon:before,
+p.addIcon:before {
+    top: 0;
+    left: 0;
+}
+
+/* Icon Images */
+.briefcase:before {
+    background-image: url(b320briefcase.gif);
+}
+
+.testIcon:before {
+    background-image: url(./Course&nbsp;Images/AddImage.png);
+}

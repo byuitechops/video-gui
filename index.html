@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>URL to Embed</title>
     <link rel="stylesheet" href="./styles.css" type="text/css">
-    <script src="./script.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 
@@ -17,92 +17,89 @@
         <div id="header">
 
             <div id="headertitle">
-                <h1>URL CONVERTER</h1>
+                <h1>URL Converter</h1>
             </div>
         </div>
+
         <div class="form-box-perspective">
-            <div class="form-box">
-                <div class="form-row">
-                    <div class="col">
-                        <div>
-                            <label>Video URL</label>
-                            <input id="url" type="text">
-                             <label>Video Title</label>
-                            <input id="videotitle" type="text">
-                        </div>
-                        <div>
-                            <label>HTML Transcript URL</label>
-                            <input id="htmlt" type="text">
-                        </div>
-                        <div>
-                            <label>RTF Transcript URL</label>
-                            <input id="rtft" type="text">
-                        </div>
-                    </div>
-                    <div class="col">&nbsp;</div>
+            <div class="left">
+                <div>
+                    <label>Video URL</label>
+                    <input id="url" type="text">
                 </div>
-                <div class="form-row">
-                    <div class="col">
-                        <div>
-                            <label>Platform</label>
-                            <select id="type">
-
-                                <option value="kaltura">Kaltura</option>
-                                <option value="youtube">Youtube</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label>Size</label>
-                            <select id="size">
-                                <option value="sm">Small</option>
-                                <option selected="selected" value="med">Medium</option>
-                                <option value="lg">Large</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label>Aspect Ratio</label>
-                            <select id="aspect">
-                                <option selected="selected" value="16-9">16:9</option>
-                                <option value="4-3">4:3</option>
-
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col">
-
-                    </div>
+                <div>
+                    <label>Video Title</label>
+                    <input id="videotitle" type="text">
                 </div>
-                <div class="form-row">
-                    <div class="col">
+                <div class="checkwrap">
+                    <label>No Audio</label>
+                    <input type="checkbox" id="noaudio">
+                </div>
+                <div>
+                    <label>HTML Transcript URL</label>
+                    <input id="htmlt" type="text">
+                </div>
+                <div>
+                    <label>RTF Transcript URL</label>
+                    <input id="rtft" type="text">
+                </div>
+                <div>
+                    <label>Platform</label>
+                    <select id="type">
 
-                        <div class="checkwrap"><label>Render as Link</label><input type="checkbox" id="link"></div>
-                        <div class="checkwrap"><label>Enable Download</label><input type="checkbox" id="download"></div>
-                    </div>
-                <div class="col">
-                 <button onclick="convert()" id="getcode">
-                            <p>Get Code</p>
-                        </button></div>
+                        <option value="kaltura">Kaltura</option>
+                        <option value="youtube">Youtube</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Size</label>
+                    <select id="size">
+                        <option value="sm">Small</option>
+                        <option selected="selected" value="med">Medium</option>
+                        <option value="lg">Large</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Aspect Ratio</label>
+                    <select id="aspect">
+                        <option selected="selected" value="16-9">16:9</option>
+                        <option value="4-3">4:3</option>
+
+                    </select>
                 </div>
 
-                <div class="form-row">
-                    <div class="col">
-                        <textarea id="output"></textarea>
-                    </div>
-                    <div class="col">
-                        <button onclick="copy('#output')" id="copybutton">
-                            <p>COPY</p>
-                        </button>
-                          <button onclick="reverse_parse('#output')" id="reversebutton">
-                            <p>Reverse Inputs</p>
-                        </button>
-                    </div>
+                <div class="checkwrap">
+                    <label>Render as Link</label>
+                    <input type="checkbox" id="link">
                 </div>
+                <div class="checkwrap">
+                    <label>Enable Download</label>
+                    <input type="checkbox" id="download">
+                </div>
+                <button onclick="convert()" id="getcode">
+                    <p>Get Code</p>
+                </button>
+
 
             </div>
+            <div class="right">
+                <div id="outwrap">
+                    <textarea id="output"></textarea>
+                    <div id="copied">Output Copied</div>
+                </div>
+                <button onclick="copy('#output')" id="copybutton">
+                    <p>Copy Code</p>
+                </button>
+                <button onclick="reverse_parse('#output')" id="reversebutton">
+                    <p>Reverse Code Into Inputs</p>
+                </button>
+            </div>
+
+
         </div>
 
     </div>
-
+    <script src="./script.js"></script>
 </body>
 
 </html>

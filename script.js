@@ -1,3 +1,23 @@
+document.querySelector("#noaudio").addEventListener('click', audiotoggle);
+
+function audiotoggle(){
+    console.log("audiotoggle");
+    var htmlt = document.querySelector("#htmlt");
+    var rtft = document.querySelector("#rtft");
+    if (document.querySelector("#noaudio").checked){
+        htmlt.value = "N/A";
+        htmlt.disabled = true;
+        rtft.value = "N/A";
+        rtft.disabled = true;
+    }
+    else{
+        htmlt.value = "";
+        htmlt.disabled = false;
+        rtft.value = "";
+        rtft.disabled = false;
+    }
+}
+
 function convert() {
     var url = document.getElementById("url").value,
         type = document.getElementById("type").value,
@@ -18,13 +38,19 @@ function convert() {
     } else if (title == "") {
         alert("Video title required");
         return;
-    } else if (htmlt == "") {
-        alert("HTML transcript URL required");
-        return;
-    } else if (rtft == "") {
-        alert("RTF transcript URL required");
-        return;
     }
+
+    if (htmlt == "") {
+        htmlt = "https://content.byui.edu/file/f0e0353b-0473-4808-9cfb-6ca04d0b0020/1/no-transcript.html";
+    } else if(htmlt=="N/A"){
+        htmlt = "https://content.byui.edu/file/f0e0353b-0473-4808-9cfb-6ca04d0b0020/1/no-audio.html";
+    }
+    if (rtft == "") {
+        rtft = "https://content.byui.edu/file/f0e0353b-0473-4808-9cfb-6ca04d0b0020/1/no-transcript.html";
+    } else if(rtft=="N/A"){
+        rtft = "https://content.byui.edu/file/f0e0353b-0473-4808-9cfb-6ca04d0b0020/1/no-audio.html";
+    }
+
 
 
     switch (type) {
@@ -116,6 +142,10 @@ function copy(element) {
     $temp.val($(element).text()).select();
     document.execCommand("copy");
     $temp.remove();
+
+    document.querySelector("#copied").classList.remove("run-animation");
+    void document.querySelector("#copied").offsetWidth;
+    document.querySelector("#copied").classList.add("run-animation");
 }
 
 function reverse_parse() {

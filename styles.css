@@ -1,33 +1,61 @@
-html{font-family:sans-serif;}
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
+#headertitle{
+    border-bottom:1px solid #777;
+}
+html{font-family:'Lato', sans-serif;}
+#outwrap{position:relative;}
+/*#copied{position:absolute;top:50%;transform:translateY(-50%);font-size:30px;width:100%; text-align:center;color:#555;opacity:0;z-index:0;}*/
+#copied{display:none;}
 
-label{display:inline-block;padding-right:15px;}
-.form-row  select, input{width:150px;}
-button{height:30px; width:100%;text-align:center;padding:none; margin:auto;}
+h1{ font-family:'Lato';margin-bottom:5px;font-weight:normal;}
+#output{width:100%; box-sizing:border-box;min-height:200px;border-radius:3px;}
+.left,.right{width:calc(50% - 15px);  box-sizing:border-box;}
+/*.left,.right{border:1px solid black;}*/
+.left{float:left;}
+.right{float:right;}
+
+.left div{clear:both;}
+.form-box-perspective{
+    margin-top:15px;
+}
+
+label{display:inline-block;padding-right:15px;float:left; margin:5px;}
+select, input{width:calc(50%); float:right; margin:5px;box-sizing:border-box;border-radius:3px;}
+
 .form-row{padding:5px 15px; display:flex; justify-content:center;}
 .col:first-child{width:calc(80% - 15px);}
 .col:last-child{width:20%;padding-left:15px; }
 .col{text-align:right;}
 .form-row div div{clear:both;text-align:right;vertical-align:center;}
-h1{margin-left:calc(50% - 250px);}
-#output{width:calc(90% - 5px);height:70px;}
 
-.container{height:100vh; width:100vw;
-    position:fixed;
-overflow:hidden;
+
+
+.container{width:90vw;max-width:800px;margin:auto;
 }
 
 button{
+    height:30px;  margin:auto;
+    box-sizing:border-box;
     width:100%;
-    margin:5px;
+    padding:8px 14px;
+    margin-top:5px;
     height:auto;
     text-align:center;
-    font-weight:bold;
-    border:3px solid white;
-    filter:brightness(1);
+    font-size:1rem; font-family:'Lato';
+    border:1px solid rgb(199, 205, 209);
+   border-radius:5px;
+    background-color:rgb(245, 245, 245);
+
     /*Make it better */
     cursor:pointer;
+    transition: background-color 0.2s ease-in-out;
 
+}
+button:hover{
+    color:white;
+    transition: background-color 0.2s ease-in-out;
+    background-color:#0076c6;
 }
 button p{
     margin:0;
@@ -46,14 +74,25 @@ button p{
 }
 
 input[type='checkbox']{
-    width:15px;
-
-    margin-right:135px;
+    box-sizing:border-box;
+   margin-left:0px;
+    width:25px;
+    margin-right:calc(50% - 15px);
 }
 
 input[type='checkbox'] + label{
     font-size:16px;
 }
-.checkwrap{}
 
 .grain, #egg, .easter-egg{display:none; important!}
+
+
+
+
+.run-animation {
+
+  animation: copied 1.5s 1;
+}
+
+@keyframes copied {60%{opacity:1;background-color:white;z-index:5;}100%{ opacity:0;z-index:0;}}
+
