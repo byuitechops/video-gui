@@ -29,6 +29,8 @@ function convert() {
         download = document.getElementById("download").checked,
         title = document.getElementById("videotitle").value,
         output = document.getElementById("output"),
+        starttime =document.getElementById("starttime").value,
+        endtime = document.getElementById("endtime").value,
         embedcode = "<div class='byui-video' data-id='",
         videoid, height, width;
 
@@ -64,7 +66,7 @@ function convert() {
             break;
     }
 
-    embedcode += videoid + "' data-platform='" + type + "' data-size='" + size + "' data-ratio='" + aspect + "' data-transcriptHTML='" + htmlt + "' data-transcriptRTF='" + rtft + "' data-link='" + link + "' data-download='" + download + "' data-title='" + title + "'>";
+    embedcode += videoid + "' data-platform='" + type + "' data-size='" + size + "' data-ratio='" + aspect + "' data-transcriptHTML='" + htmlt + "' data-transcriptRTF='" + rtft + "' data-link='" + link + "' data-download='" + download + "' data-title='" + title + "' data-starttime='" + starttime + "' data-endtime='" + endtime +"'>";
 
     embedcode += make_iframe();
 
